@@ -23,8 +23,8 @@ def detect_mitre_techniques(pdf_path):
     return occurrences
 
 # Paths to your PDF and Excel file
-pdf_path = r'D:\VS Projects\PY\Report - CredentialDump.pdf'
-excel_path = r'D:\VS Projects\PY\enterprise-attack-v14.1.xlsx'
+pdf_path = r'D:\VS Projects\PY\MX CYBER REP TO XL\Report - CredentialDump.pdf'
+excel_path = r'D:\VS Projects\PY\MX CYBER REP TO XL\enterprise-attack-v14.1.xlsx'
 
 # Read the Excel data and detect MITRE techniques in the PDF
 excel_data = read_excel(excel_path)
@@ -48,7 +48,7 @@ for technique in technique_occurrences.keys():
 
 # Determine the output file name
 output_file_name = first_non_decimal_technique_name if first_non_decimal_technique_name else "mitre_techniques_results"
-output_path = fr'D:\VS Projects\PY\{output_file_name}.xlsx'
+output_path = fr'D:\VS Projects\PY\MX CYBER REP TO XL\{output_file_name}.xlsx'
 
 # Create a DataFrame and export to Excel
 results_df = pd.DataFrame(results, columns=['Technique ID', 'Name', 'Tactics', 'Platform'])
